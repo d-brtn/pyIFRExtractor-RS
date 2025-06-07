@@ -106,7 +106,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "py_ifrextractor"
+name = "pyifrextractor"
 version = "0.0.1"
 dependencies = [
  "nom",

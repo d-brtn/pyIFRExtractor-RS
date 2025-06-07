@@ -1453,7 +1453,7 @@ fn uefi_ifr_extract_to_string(
 
 /// This module is a Python submodule implemented in Rust.
 #[pymodule]
-fn ifrextractor_rs(
+fn pyifrextractor(
     py: Python,
     m: &PyModule,
 ) -> PyResult<()> {

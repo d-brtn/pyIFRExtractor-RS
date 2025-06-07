@@ -1,13 +1,13 @@
 [package]
-name = "py_ifrextractor"
+name = "pyifrextractor"
 version = "0.0.1"
 edition = "2021"
 description = "IFRExtractor-RS: parse and extract HII IFR data, with Python bindings via PyO3"
 authors = ["D-BRTN"]
-license = "MIT OR Apache-2.0"
+license = "BSD2"
 
 [lib]
-name = "ifrextractor_rs"
+name = "pyifrextractor"
 crate-type = ["cdylib"]  # build a C-compatible shared library
 
 [dependencies]
