@@ -39,25 +39,25 @@ This builds the native extension and installs `pyifrextractor` into your active 
 ## Quickstart
 
 ```python
-import ifrextractor_rs
+import pyifrextractor
 
 # Load firmware blob
 with open("firmware.bin", "rb") as f:
     data = f.read()
 
 # 1) Framework HII
-strings, forms = ifrextractor_rs.find_framework_packages(data)
+strings, forms = pyifrextractor.find_framework_packages(data)
 print(f"Found {len(strings)} string packages and {len(forms)} form packages (Framework)")
 
 if strings and forms:
-    text = ifrextractor_rs.extract_framework_ifr(data, forms[0], strings[0], verbose=True)
+    text = pyifrextractor.extract_framework_ifr(data, forms[0], strings[0], verbose=True)
     print(text)
 
 # 2) UEFI HII
-uefi_strings, uefi_forms = ifrextractor_rs.find_uefi_packages(data)
+uefi_strings, uefi_forms = pyifrextractor.find_uefi_packages(data)
 print(f"Found {len(uefi_strings)} string packages and {len(uefi_forms)} form packages (UEFI)")
 
 if uefi_strings and uefi_forms:
-    uefi_text = ifrextractor_rs.extract_uefi_ifr(data, uefi_forms[0], uefi_strings[0], verbose=False)
+    uefi_text = pyifrextractor.extract_uefi_ifr(data, uefi_forms[0], uefi_strings[0], verbose=False)
     print(uefi_text)
 ```
